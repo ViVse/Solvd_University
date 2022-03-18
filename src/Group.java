@@ -16,6 +16,10 @@ public class Group {
         students.add(newStudent);
     }
 
+    public void getPresidentReport() {
+        president.giveReport(students);
+    }
+
     public String toString() {
         String info = "Group: " + number + "\n" + curator.toString() + "\n" + president.toString() + "\nStudents:";
         for(Student student: students)

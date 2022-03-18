@@ -2,28 +2,28 @@ import java.util.ArrayList;
 
 public class University {
     private String name;
-    private ArrayList<Group> groups = new ArrayList<Group>();
-    private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
+    private Rector rector;
+    private ArrayList<Faculty> faculties = new ArrayList<Faculty>();
+    private ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
 
-    public University(String name) {
+    public University(String name, Rector rector) {
         this.name = name;
+        this.rector = rector;
     }
 
-    public void addGroup(Group newGroup) {
-        groups.add(newGroup);
+    public void addFaculty(Faculty newFaculty) {
+        faculties.add(newFaculty);
     }
 
-    public void addTeacher(Teacher newTeacher) {
-        teachers.add(newTeacher);
+    public void addResolution() {
+        Resolution newResolution = rector.createResolution();
+        resolutions.add(newResolution);
     }
 
     public String toString() {
-        String info = "University " + name + "\nGroups:";
-        for(Group group : groups)
-            info += "\n" + group.toString();
-        info += "\nTeachers:";
-        for(Teacher teacher : teachers)
-            info += "\n" + teacher.toString();
+        String info = "University " + name + "\nRector: " + rector.toString() + "\nFaculties:";
+        for(Faculty faculty: faculties)
+            info += "\n" + faculty;
         return info;
     }
 }

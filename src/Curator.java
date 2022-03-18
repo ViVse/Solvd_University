@@ -1,7 +1,7 @@
 public class Curator extends Teacher{
 
-    public Curator(String name, int age, String subject) {
-        super(name, age, subject);
+    public Curator(String name, String surname, int age, String subject) {
+        super(name, surname, age, subject);
     }
 
     public void curate() {
