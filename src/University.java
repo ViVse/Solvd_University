@@ -6,8 +6,24 @@ public class University {
     private ArrayList<Faculty> faculties = new ArrayList<Faculty>();
     private ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
 
+    public University() {}
+
     public University(String name, Rector rector) {
         this.name = name;
+        this.rector = rector;
+    }
+
+    public String getName() { return name; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Rector getRector() {
+        return rector;
+    }
+
+    public void setRector(Rector rector) {
         this.rector = rector;
     }
 

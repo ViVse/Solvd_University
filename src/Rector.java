@@ -1,6 +1,8 @@
 import java.util.Random;
 
 public class Rector extends Human {
+    public Rector() {}
+
     public Rector(String name, String surname, int age) {
         super(name, surname, age);
     }

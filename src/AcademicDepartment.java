@@ -5,6 +5,8 @@ public class AcademicDepartment {
     private ArrayList<Group> groups = new ArrayList<Group>();
     private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
 
+    public  AcademicDepartment() {}
+
     public AcademicDepartment(String name) {
         this.name = name;
     }
@@ -15,6 +17,12 @@ public class AcademicDepartment {
 
     public void addTeacher(Teacher newTeacher) {
         teachers.add(newTeacher);
+    }
+
+    public String getName() { return name; }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String toString() {

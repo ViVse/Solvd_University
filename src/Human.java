@@ -5,6 +5,8 @@ abstract class Human {
     private String phoneNumber;
     private String email;
 
+    public Human() {}
+
     public Human(String name, String surname, int age)  {
         this.name = name;
         this.surname = surname;

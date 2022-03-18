@@ -5,6 +5,8 @@ public class Student extends Human{
     private boolean presence;
     private ArrayList<Lecture> learnedLectures = new ArrayList<>();
 
+    public Student() {}
+
     public Student(String name, String surname, int age) {
         super(name, surname, age);
         presence = true;
