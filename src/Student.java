@@ -3,12 +3,11 @@ import java.util.ArrayList;
 public class Student extends Human{
     private ArrayList<Integer> marks = new ArrayList<Integer>();
     private boolean presence;
-    private ArrayList<Lecture> learnedLectures = new ArrayList<>();
 
     public Student() {}
 
     public Student(String name, String surname, int age) {
-        super(name, surname, age);
+        super(name, surname, age, null, null);
         presence = true;
     }
 
@@ -24,12 +23,16 @@ public class Student extends Human{
         return  presence;
     }
 
-    public void addMark(int mark) {
-        marks.add(mark);
+    public void setMarks(ArrayList<Integer> marks) {
+        this.marks = marks;
     }
 
-    public void learn(Lecture lecture) {
-        learnedLectures.add(lecture);
+    public ArrayList<Integer> getMarks() {
+        return marks;
+    }
+
+    public void addMark(int mark) {
+        marks.add(mark);
     }
 
     public String toString() {

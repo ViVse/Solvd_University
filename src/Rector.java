@@ -4,7 +4,7 @@ public class Rector extends Human {
     public Rector() {}
 
     public Rector(String name, String surname, int age) {
-        super(name, surname, age);
+        super(name, surname, age, null, null);
     }
 
     public Resolution createResolution() {

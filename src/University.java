@@ -27,6 +27,22 @@ public class University {
         this.rector = rector;
     }
 
+    public ArrayList<Faculty> getFaculties() {
+        return faculties;
+    }
+
+    public void setFaculties(ArrayList<Faculty> faculties) {
+        this.faculties = faculties;
+    }
+
+    public ArrayList<Resolution> getResolutions() {
+        return resolutions;
+    }
+
+    public void setResolutions(ArrayList<Resolution> resolutions) {
+        this.resolutions = resolutions;
+    }
+
     public void addFaculty(Faculty newFaculty) {
         faculties.add(newFaculty);
     }

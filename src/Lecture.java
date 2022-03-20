@@ -19,7 +19,7 @@ public class Lecture {
         this.subject = subject;
     }
 
-    public String theme() {
+    public String getTheme() {
         return theme;
     }
 
@@ -33,5 +33,14 @@ public class Lecture {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    @Override
+    public String toString() {
+        return "Lecture{" +
+                "subject='" + subject + '\'' +
+                ", theme='" + theme + '\'' +
+                ", info='" + info + '\'' +
+                '}';
     }
 }

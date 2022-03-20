@@ -7,8 +7,10 @@ public class AcademicDepartment {
 
     public  AcademicDepartment() {}
 
-    public AcademicDepartment(String name) {
+    public AcademicDepartment(String name, ArrayList<Group> groups, ArrayList<Teacher> teachers) {
         this.name = name;
+        this.groups = groups;
+        this.teachers = teachers;
     }
 
     public void addGroup(Group newGroup) {
@@ -23,6 +25,20 @@ public class AcademicDepartment {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ArrayList<Group> getGroups() { return groups; }
+
+    public void setGroups(ArrayList<Group> groups) {
+        this.groups = groups;
+    }
+
+    public ArrayList<Teacher> getTeachers() {
+        return teachers;
+    }
+
+    public void setTeachers(ArrayList<Teacher> teachers) {
+        this.teachers = teachers;
     }
 
     public String toString() {

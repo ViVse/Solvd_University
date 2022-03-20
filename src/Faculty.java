@@ -6,14 +6,23 @@ public class Faculty {
 
     public Faculty() {}
 
-    public Faculty(String name) {
+    public Faculty(String name, ArrayList<AcademicDepartment> departments) {
         this.name = name;
+        this.departments = departments;
     }
 
     public String getName() { return name; }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public ArrayList<AcademicDepartment> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(ArrayList<AcademicDepartment> departments) {
+        this.departments = departments;
     }
 
     public void addDepartment(AcademicDepartment newDepartment) {

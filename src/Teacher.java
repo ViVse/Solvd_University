@@ -3,12 +3,11 @@ import java.util.Random;
 
 public class Teacher extends Human {
     private String subject;
-    private ArrayList<Lecture> lectures = new ArrayList<>();
 
     public  Teacher() {}
 
     public Teacher(String name, String surname, int age, String subject) {
-        super(name, surname, age);
+        super(name, surname, age, null, null);
         this.subject = subject;
     }
 
@@ -26,15 +25,9 @@ public class Teacher extends Human {
         student.addMark(mark);
     }
 
-    public void prepareLecture() {
+    public Lecture prepareLecture() {
         Lecture newLecture = new Lecture(subject, "Random theme", "Some info");
-        lectures.add(newLecture);
-    }
-
-    public void teach(Student student) {
-        Random random = new Random();
-        Lecture lecture = lectures.get(random.nextInt(lectures.size()));
-        student.learn(lecture);
+        return newLecture;
     }
 
     public String toString() {

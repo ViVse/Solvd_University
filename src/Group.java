@@ -5,13 +5,16 @@ public class Group {
     private Curator curator;
     private GroupPresident president;
     private ArrayList<Student> students = new ArrayList<Student>();
+    private Schedule schedule;
 
     public Group() {}
 
-    public Group(int number, Curator curator, GroupPresident president) {
+    public Group(int number, Curator curator, GroupPresident president, Schedule schedule, ArrayList<Student> students) {
         this.number = number;
         this.curator = curator;
         this.president = president;
+        this.schedule = schedule;
+        this.students = students;
     }
 
     public void setGroupNumber(int number) {
@@ -38,6 +41,22 @@ public class Group {
         this.president = president;
     }
 
+    public Schedule getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Schedule schedule) {
+        this.schedule = schedule;
+    }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
+
     public void addStudent(Student newStudent) {
         students.add(newStudent);
     }
@@ -50,6 +69,7 @@ public class Group {
         String info = "Group: " + number + "\n" + curator.toString() + "\n" + president.toString() + "\nStudents:";
         for(Student student: students)
             info += "\n" + student.toString();
+        info += "\n" + schedule.toString();
         return info;
     }
 }
