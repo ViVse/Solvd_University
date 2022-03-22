@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class GroupPresident extends Student {
     public GroupPresident() {}
 
-    public GroupPresident(String name, String surname, int age) {
-        super(name, surname, age);
+    public GroupPresident(String name, String surname, int age, ArrayList<Integer> marks) {
+        super(name, surname, age, marks);
     }
 
     public String toString() {

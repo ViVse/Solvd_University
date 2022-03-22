@@ -6,8 +6,9 @@ public class Student extends Human{
 
     public Student() {}
 
-    public Student(String name, String surname, int age) {
+    public Student(String name, String surname, int age, ArrayList<Integer> marks) {
         super(name, surname, age, null, null);
+        this.marks = marks;
         presence = true;
     }
 

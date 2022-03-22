@@ -8,9 +8,11 @@ public class University {
 
     public University() {}
 
-    public University(String name, Rector rector) {
+    public University(String name, Rector rector, ArrayList<Faculty> faculties, ArrayList<Resolution> resolutions) {
         this.name = name;
         this.rector = rector;
+        this.faculties = faculties;
+        this.resolutions = resolutions;
     }
 
     public String getName() { return name; }

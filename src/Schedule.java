@@ -7,6 +7,10 @@ public class Schedule {
 
     public Schedule() { }
 
+    public Schedule(Map<DayOfTheWeek, ArrayList<Lecture>> schedule) {
+        this.schedule = schedule;
+    }
+
     public void addLecture(DayOfTheWeek day, Lecture lecture) {
         if (schedule.get(day) == null) {
             schedule.put(day, new ArrayList<Lecture>());
