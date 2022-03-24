@@ -1,8 +1,9 @@
 import Documents.Lecture;
+import Interfaces.ITeach;
 
 import java.util.Random;
 
-public class Teacher extends Human {
+public class Teacher extends Human implements ITeach {
     private String subject;
 
     public  Teacher() {}
@@ -26,9 +27,15 @@ public class Teacher extends Human {
         student.addMark(mark);
     }
 
-    public Lecture prepareLecture() {
+    @Override
+    public Lecture PrepareLecture() {
         Lecture newLecture = new Lecture(subject, "Random theme", "Some info");
         return newLecture;
+    }
+
+    @Override
+    public void GiveLecture() {
+        System.out.println("Giving lectures about " + subject);
     }
 
     public String toString() {
