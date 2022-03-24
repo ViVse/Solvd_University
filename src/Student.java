@@ -1,6 +1,8 @@
+import Interfaces.IStudy;
+
 import java.util.ArrayList;
 
-public class Student extends Human{
+public class Student extends Human implements IStudy {
     private ArrayList<Integer> marks = new ArrayList<Integer>();
     private boolean presence;
 
@@ -38,5 +40,20 @@ public class Student extends Human{
 
     public String toString() {
         return super.toString();
+    }
+
+    @Override
+    public void Read() {
+        System.out.println("Reading...");
+    }
+
+    @Override
+    public void MakeNotes() {
+        System.out.println("Making notes...");
+    }
+
+    @Override
+    public void DoHomework() {
+        System.out.println("Doing homework...");
     }
 }
