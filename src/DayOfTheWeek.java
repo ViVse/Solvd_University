@@ -1,8 +1,8 @@
 enum DayOfTheWeek{
-    Mon("Monday"), Tue("Tuesday"), Wed("Wednesday"), Thu("Thursday"), Fri("Friday"), Sat("Saturday"), Sun("Sunday");
-    private String day;
-    DayOfTheWeek(String day){
-        this.day = day;
+    MON("Monday"), TUE("Tuesday"), WED("Wednesday"), THU("Thursday"), FRI("Friday"), SAT("Saturday"), SUN("Sunday");
+    private String value;
+    DayOfTheWeek(String value){
+        this.value = value;
     }
-    public String getDay(){ return day;}
+    public String getValue(){ return value;}
 }
