@@ -1,3 +1,8 @@
+package Documents;
+
+import Documents.Lecture;
+import Enums.DayOfTheWeek;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +25,7 @@ public class Schedule {
 
     @Override
     public String toString() {
-        String info = "Schedule: ";
+        String info = "Documents.Schedule: ";
         for (Map.Entry<DayOfTheWeek, ArrayList<Lecture>> set :
                 schedule.entrySet()) {
             info += "\n" + set.getKey() + ":";

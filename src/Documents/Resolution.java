@@ -1,3 +1,5 @@
+package Documents;
+
 import java.time.LocalDate;
 
 public class Resolution {

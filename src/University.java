@@ -1,3 +1,5 @@
+import Documents.Resolution;
+
 import java.util.ArrayList;
 
 public class University {

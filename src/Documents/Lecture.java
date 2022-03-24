@@ -1,3 +1,5 @@
+package Documents;
+
 public class Lecture {
     private String subject;
     private String theme;
@@ -37,7 +39,7 @@ public class Lecture {
 
     @Override
     public String toString() {
-        return "Lecture{" +
+        return "Documents.Lecture{" +
                 "subject='" + subject + '\'' +
                 ", theme='" + theme + '\'' +
                 ", info='" + info + '\'' +

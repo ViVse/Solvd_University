@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import Documents.Lecture;
+
 import java.util.Random;
 
 public class Teacher extends Human {

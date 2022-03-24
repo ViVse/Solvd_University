@@ -1,3 +1,5 @@
+import Documents.Schedule;
+
 import java.util.ArrayList;
 
 public class Group {

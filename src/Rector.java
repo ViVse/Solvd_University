@@ -1,3 +1,5 @@
+import Documents.Resolution;
+
 import java.util.Random;
 
 public class Rector extends Human {
@@ -9,7 +11,7 @@ public class Rector extends Human {
 
     public Resolution createResolution() {
         Random random = new Random();
-        String name = "Resolution #" + random.nextInt(1000);
+        String name = "Documents.Resolution #" + random.nextInt(1000);
         String text = "Sample text";
         return new Resolution(name, text);
     }
