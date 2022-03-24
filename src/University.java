@@ -52,7 +52,7 @@ public class University {
     }
 
     public void addResolution() {
-        Resolution newResolution = rector.createResolution();
+        Resolution newResolution = rector.CreateResolution();
         resolutions.add(newResolution);
     }
 
