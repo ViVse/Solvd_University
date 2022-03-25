@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class AcademicDepartment {
+public abstract class AcademicDepartment {
     private String name;
     private ArrayList<Group> groups = new ArrayList<Group>();
     private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
@@ -40,6 +40,8 @@ public class AcademicDepartment {
     public void setTeachers(ArrayList<Teacher> teachers) {
         this.teachers = teachers;
     }
+
+    public abstract void CreateCurriculum();
 
     public String toString() {
         String info = "Academic Department " + name + "\nGroups:";
