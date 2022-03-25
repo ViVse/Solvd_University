@@ -8,9 +8,12 @@ public enum DayOfTheWeek{
     FRI("Friday"),
     SAT("Saturday"),
     SUN("Sunday");
+
     private final String value;
+
     DayOfTheWeek(String value){
         this.value = value;
     }
+
     public String getValue(){ return value;}
 }
