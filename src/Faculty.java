@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Faculty {
+public abstract class Faculty {
     final String name;
     ArrayList<AcademicDepartment> departments = new ArrayList<AcademicDepartment>();
 
