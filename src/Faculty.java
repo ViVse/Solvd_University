@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
 public class Faculty {
-    String name;
+    final String name;
     ArrayList<AcademicDepartment> departments = new ArrayList<AcademicDepartment>();
 
-    public Faculty() {}
+    public Faculty() {
+        name = "Faculty";
+    }
 
     public Faculty(String name, ArrayList<AcademicDepartment> departments) {
         this.name = name;
@@ -12,10 +14,6 @@ public class Faculty {
     }
 
     public String getName() { return name; }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public ArrayList<AcademicDepartment> getDepartments() {
         return departments;

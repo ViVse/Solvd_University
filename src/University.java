@@ -3,12 +3,14 @@ import Documents.Resolution;
 import java.util.ArrayList;
 
 public class University {
-    private String name;
+    private final String name;
     private Rector rector;
     private ArrayList<Faculty> faculties = new ArrayList<Faculty>();
     private ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
 
-    public University() {}
+    public University() {
+        name = "University";
+    }
 
     public University(String name, Rector rector, ArrayList<Faculty> faculties, ArrayList<Resolution> resolutions) {
         this.name = name;
@@ -18,10 +20,6 @@ public class University {
     }
 
     public String getName() { return name; }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Rector getRector() {
         return rector;

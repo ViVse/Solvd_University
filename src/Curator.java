@@ -1,4 +1,4 @@
-public class Curator extends Teacher{
+public final class Curator extends Teacher{
 
     public Curator() {}
 

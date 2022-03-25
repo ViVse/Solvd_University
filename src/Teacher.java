@@ -28,13 +28,13 @@ public class Teacher extends Human implements ITeach {
     }
 
     @Override
-    public Lecture PrepareLecture() {
+    public final Lecture PrepareLecture() {
         Lecture newLecture = new Lecture(subject, "Random theme", "Some info");
         return newLecture;
     }
 
     @Override
-    public void GiveLecture() {
+    public final void GiveLecture() {
         System.out.println("Giving lectures about " + subject);
     }
 

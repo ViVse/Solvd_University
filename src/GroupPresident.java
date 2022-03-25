@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GroupPresident extends Student {
+public final class GroupPresident extends Student {
     public GroupPresident() {}
 
     public GroupPresident(String name, String surname, int age, ArrayList<Integer> marks) {

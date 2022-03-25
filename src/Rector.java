@@ -3,7 +3,7 @@ import Interfaces.IRector;
 
 import java.util.Random;
 
-public class Rector extends Human implements IRector {
+public final class Rector extends Human implements IRector {
     public Rector() {}
 
     public Rector(String name, String surname, int age) {

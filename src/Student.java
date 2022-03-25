@@ -43,17 +43,17 @@ public class Student extends Human implements IStudy {
     }
 
     @Override
-    public void Read() {
+    public final void Read() {
         System.out.println("Reading...");
     }
 
     @Override
-    public void MakeNotes() {
+    public final void MakeNotes() {
         System.out.println("Making notes...");
     }
 
     @Override
-    public void DoHomework() {
+    public final void DoHomework() {
         System.out.println("Doing homework...");
     }
 }
