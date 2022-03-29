@@ -1,8 +1,11 @@
-import Documents.Resolution;
+package com.solvd.university;
+
+import com.solvd.university.Documents.Resolution;
 
 import java.util.ArrayList;
 
 public class University {
+
     private final String name;
     private Rector rector;
     private ArrayList<Faculty> faculties = new ArrayList<Faculty>();

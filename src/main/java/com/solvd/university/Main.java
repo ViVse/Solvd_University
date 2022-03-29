@@ -1,6 +1,8 @@
-import Documents.Lecture;
-import Documents.Schedule;
-import Enums.DayOfTheWeek;
+package com.solvd.university;
+
+import com.solvd.university.Documents.Lecture;
+import com.solvd.university.Documents.Schedule;
+import com.solvd.university.Enums.DayOfTheWeek;
 
 public class Main {
     public static void main(String[] args) {

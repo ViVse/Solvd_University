@@ -1,6 +1,9 @@
+package com.solvd.university;
+
 import java.util.ArrayList;
 
 public abstract class Faculty {
+
     final String name;
     ArrayList<AcademicDepartment> departments = new ArrayList<AcademicDepartment>();
 

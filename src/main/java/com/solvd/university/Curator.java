@@ -1,3 +1,5 @@
+package com.solvd.university;
+
 public final class Curator extends Teacher{
 
     public Curator() {}

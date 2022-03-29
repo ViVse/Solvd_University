@@ -1,13 +1,13 @@
-package Documents;
+package com.solvd.university.Documents;
 
-import Documents.Lecture;
-import Enums.DayOfTheWeek;
+import com.solvd.university.Enums.DayOfTheWeek;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Schedule {
+
     private Map<DayOfTheWeek, ArrayList<Lecture>> schedule = new HashMap<DayOfTheWeek, ArrayList<Lecture>>();
 
     public Schedule() { }

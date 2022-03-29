@@ -1,3 +1,5 @@
+package com.solvd.university;
+
 import java.util.ArrayList;
 
 public class MathFaculty extends Faculty {

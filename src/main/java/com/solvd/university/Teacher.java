@@ -1,9 +1,12 @@
-import Documents.Lecture;
-import Interfaces.ITeach;
+package com.solvd.university;
+
+import com.solvd.university.Documents.Lecture;
+import com.solvd.university.Interfaces.ITeach;
 
 import java.util.Random;
 
 public class Teacher extends Human implements ITeach {
+
     private String subject;
 
     public  Teacher() {}

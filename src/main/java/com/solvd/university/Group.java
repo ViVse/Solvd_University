@@ -1,8 +1,11 @@
-import Documents.Schedule;
+package com.solvd.university;
+
+import com.solvd.university.Documents.Schedule;
 
 import java.util.ArrayList;
 
 public class Group {
+
     private int number;
     private Curator curator;
     private GroupPresident president;

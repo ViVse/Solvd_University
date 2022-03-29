@@ -1,6 +1,7 @@
-package Documents;
+package com.solvd.university.Documents;
 
 public class Lecture {
+
     private String subject;
     private String theme;
     private String info;

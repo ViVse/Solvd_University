@@ -1,8 +1,9 @@
-package Documents;
+package com.solvd.university.Documents;
 
 import java.time.LocalDate;
 
 public class Resolution {
+
     private String name;
     private String text;
     private LocalDate creationDate;

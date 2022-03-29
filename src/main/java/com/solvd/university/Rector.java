@@ -1,9 +1,12 @@
-import Documents.Resolution;
-import Interfaces.IRector;
+package com.solvd.university;
+
+import com.solvd.university.Documents.Resolution;
+import com.solvd.university.Interfaces.IAdministrate;
 
 import java.util.Random;
 
-public final class Rector extends Human implements IRector {
+public final class Rector extends Human implements IAdministrate {
+
     public Rector() {}
 
     public Rector(String name, String surname, int age) {

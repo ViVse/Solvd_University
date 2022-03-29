@@ -1,6 +1,9 @@
+package com.solvd.university;
+
 import java.util.ArrayList;
 
 public final class GroupPresident extends Student {
+
     public GroupPresident() {}
 
     public GroupPresident(String name, String surname, int age, ArrayList<Integer> marks) {
@@ -24,7 +27,6 @@ public final class GroupPresident extends Student {
         for(Student student: students) {
             if(!student.getPresence()) number++;
         }
-
         return number;
     }
 }

@@ -1,8 +1,11 @@
-import Interfaces.IStudy;
+package com.solvd.university;
+
+import com.solvd.university.Interfaces.IStudy;
 
 import java.util.ArrayList;
 
 public class Student extends Human implements IStudy {
+
     private ArrayList<Integer> marks = new ArrayList<Integer>();
     private boolean presence;
 

@@ -1,4 +1,7 @@
+package com.solvd.university;
+
 public abstract class Human {
+
     private String name;
     private String surname;
     private int age;

@@ -1,6 +1,7 @@
-package Enums;
+package com.solvd.university.Enums;
 
 public enum DayOfTheWeek{
+
     MON("Monday"),
     TUE("Tuesday"),
     WED("Wednesday"),

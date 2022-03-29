@@ -1,8 +1,9 @@
-package Interfaces;
+package com.solvd.university.Interfaces;
 
-import Documents.Lecture;
+import com.solvd.university.Documents.Lecture;
 
 public interface ITeach {
+
     Lecture PrepareLecture();
     void GiveLecture ();
 }
