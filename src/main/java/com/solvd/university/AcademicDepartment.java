@@ -1,9 +1,13 @@
 package com.solvd.university;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 
 public abstract class AcademicDepartment {
 
+    private static final Logger LOGGER = LogManager.getLogger(Teacher.class);
     private String name;
     private ArrayList<Group> groups = new ArrayList<Group>();
     private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
@@ -27,7 +31,13 @@ public abstract class AcademicDepartment {
     public String getName() { return name; }
 
     public void setName(String name) {
-        this.name = name;
+        try {
+            if(name == null || name.isBlank())
+                throw new IllegalArgumentException("Name should not be blank");
+            this.name = name;
+        } catch(IllegalArgumentException ex) {
+            LOGGER.error(ex.getMessage());
+        }
     }
 
     public ArrayList<Group> getGroups() { return groups; }

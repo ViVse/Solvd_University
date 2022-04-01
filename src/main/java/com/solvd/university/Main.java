@@ -9,10 +9,9 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    private static final Logger logger = LogManager.getLogger(Main.class);
-
     public static void main(String[] args) {
-        logger.info("Test");
+            Student st = new Student();
+            st.addMark(16);
 
 //        Schedule schedule = new Schedule();
 //

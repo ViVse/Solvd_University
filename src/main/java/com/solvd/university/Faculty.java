@@ -1,14 +1,18 @@
 package com.solvd.university;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 
 public abstract class Faculty {
 
-    final String name;
+    private static final Logger LOGGER = LogManager.getLogger(Faculty.class);
+    String name;
     ArrayList<AcademicDepartment> departments = new ArrayList<AcademicDepartment>();
 
     public Faculty() {
-        name = "Faculty";
+
     }
 
     public Faculty(String name, ArrayList<AcademicDepartment> departments) {
@@ -17,6 +21,16 @@ public abstract class Faculty {
     }
 
     public String getName() { return name; }
+
+    public void setName(String name) {
+        try {
+            if(name == null || name.isBlank())
+                throw new IllegalArgumentException("Name should not be blank");
+            this.name = name;
+        } catch(IllegalArgumentException ex) {
+            LOGGER.error(ex.getMessage());
+        }
+    }
 
     public ArrayList<AcademicDepartment> getDepartments() {
         return departments;

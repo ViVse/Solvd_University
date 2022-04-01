@@ -1,11 +1,14 @@
 package com.solvd.university;
 
 import com.solvd.university.Interfaces.IStudy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
 public class Student extends Human implements IStudy {
 
+    private static final Logger LOGGER = LogManager.getLogger(Student.class);
     private ArrayList<Integer> marks = new ArrayList<Integer>();
     private boolean presence;
 
@@ -38,11 +41,13 @@ public class Student extends Human implements IStudy {
     }
 
     public void addMark(int mark) {
-        marks.add(mark);
-    }
-
-    public String toString() {
-        return super.toString();
+        try {
+            if(mark < 1 || mark > 5)
+                throw new IllegalArgumentException("Mark should be between 1 and 5");
+            marks.add(mark);
+        } catch(IllegalArgumentException ex) {
+            LOGGER.error(ex.getMessage());
+        }
     }
 
     @Override
@@ -58,5 +63,9 @@ public class Student extends Human implements IStudy {
     @Override
     public final void DoHomework() {
         System.out.println("Doing homework...");
+    }
+
+    public String toString() {
+        return super.toString();
     }
 }

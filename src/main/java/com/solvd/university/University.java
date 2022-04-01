@@ -1,18 +1,21 @@
 package com.solvd.university;
 
 import com.solvd.university.Documents.Resolution;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
 public class University {
 
-    private final String name;
+    private static final Logger LOGGER = LogManager.getLogger(Teacher.class);
+    private String name;
     private Rector rector;
     private ArrayList<Faculty> faculties = new ArrayList<Faculty>();
     private ArrayList<Resolution> resolutions = new ArrayList<Resolution>();
 
     public University() {
-        name = "University";
+
     }
 
     public University(String name, Rector rector, ArrayList<Faculty> faculties, ArrayList<Resolution> resolutions) {
@@ -23,6 +26,16 @@ public class University {
     }
 
     public String getName() { return name; }
+
+    public void setName(String name) {
+        try {
+            if(name == null || name.isBlank())
+                throw new IllegalArgumentException("Name should not be blank");
+            this.name = name;
+        } catch(IllegalArgumentException ex) {
+            LOGGER.error(ex.getMessage());
+        }
+    }
 
     public Rector getRector() {
         return rector;

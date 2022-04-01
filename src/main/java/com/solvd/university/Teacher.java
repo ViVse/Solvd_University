@@ -2,11 +2,14 @@ package com.solvd.university;
 
 import com.solvd.university.Documents.Lecture;
 import com.solvd.university.Interfaces.ITeach;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Random;
 
 public class Teacher extends Human implements ITeach {
 
+    private static final Logger LOGGER = LogManager.getLogger(Teacher.class);
     private String subject;
 
     public  Teacher() {}
@@ -21,7 +24,13 @@ public class Teacher extends Human implements ITeach {
     }
 
     public void setSubject(String subject) {
-        this.subject = subject;
+        try {
+            if(subject == null || subject.isBlank())
+                throw new IllegalArgumentException("Subject should not be blank");
+            this.subject = subject;
+        } catch(IllegalArgumentException ex) {
+            LOGGER.error(ex.getMessage());
+        }
     }
 
     public void giveMark(Student student) {
