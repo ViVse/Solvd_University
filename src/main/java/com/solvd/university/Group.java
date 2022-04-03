@@ -1,8 +1,8 @@
 package com.solvd.university;
 
-import com.solvd.university.Documents.Schedule;
-
 import java.util.ArrayList;
+
+import com.solvd.university.Documents.Schedule;
 
 public class Group {
 

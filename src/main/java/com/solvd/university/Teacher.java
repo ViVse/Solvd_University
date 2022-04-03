@@ -1,12 +1,13 @@
 package com.solvd.university;
 
-import com.solvd.university.Documents.Lecture;
-import com.solvd.university.Exceptions.TeacherException;
-import com.solvd.university.Interfaces.ITeach;
+import java.util.Random;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Random;
+import com.solvd.university.Documents.Lecture;
+import com.solvd.university.Exceptions.TeacherException;
+import com.solvd.university.Interfaces.ITeach;
 
 public class Teacher extends Human implements ITeach {
 

@@ -1,10 +1,10 @@
 package com.solvd.university.Documents;
 
-import com.solvd.university.Enums.DayOfTheWeek;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.solvd.university.Enums.DayOfTheWeek;
 
 public class Schedule {
 

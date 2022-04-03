@@ -1,9 +1,9 @@
 package com.solvd.university;
 
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
 
 public abstract class Faculty {
 

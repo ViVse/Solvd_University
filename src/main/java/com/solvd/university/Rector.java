@@ -1,9 +1,9 @@
 package com.solvd.university;
 
+import java.util.Random;
+
 import com.solvd.university.Documents.Resolution;
 import com.solvd.university.Interfaces.IAdministrate;
-
-import java.util.Random;
 
 public final class Rector extends Human implements IAdministrate {
 

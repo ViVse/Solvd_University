@@ -1,10 +1,11 @@
 package com.solvd.university;
 
-import com.solvd.university.Documents.Resolution;
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
+import com.solvd.university.Documents.Resolution;
 
 public class University {
 
