@@ -1,6 +1,7 @@
 package com.solvd.university;
 
 import com.solvd.university.Documents.Lecture;
+import com.solvd.university.Exceptions.TeacherException;
 import com.solvd.university.Interfaces.ITeach;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,9 +27,9 @@ public class Teacher extends Human implements ITeach {
     public void setSubject(String subject) {
         try {
             if(subject == null || subject.isBlank())
-                throw new IllegalArgumentException("Subject should not be blank");
+                throw new TeacherException("Subject should not be blank");
             this.subject = subject;
-        } catch(IllegalArgumentException ex) {
+        } catch(TeacherException ex) {
             LOGGER.error(ex.getMessage());
         }
     }
