@@ -2,6 +2,7 @@ package com.solvd.university;
 
 import java.util.ArrayList;
 
+import com.solvd.university.Interfaces.ICountStudentsFunction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,11 +25,15 @@ public final class GroupPresident extends Student {
     }
 
     private int countAbsentStudents(ArrayList<Student> students) {
-        int number = 0;
-        for(Student student: students) {
-            if(!student.getPresence()) number++;
-        }
-        return number;
+        ICountStudentsFunction countAbsent = allStudents -> {
+            int number = 0;
+            for(Student student: students) {
+                if(!student.getPresence()) number++;
+            }
+            return number;
+        };
+
+        return countAbsent.count(students);
     }
 
     public String toString() {
