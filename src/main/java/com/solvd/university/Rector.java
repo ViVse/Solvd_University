@@ -30,4 +30,9 @@ public final class Rector extends Human implements IAdministrate {
     public void MakeSpeech() {
         LOGGER.info("Delivering a speech");
     }
+
+    @Override
+    public String toString() {
+        return  "Rector: " + super.toString();
+    }
 }

@@ -15,10 +15,6 @@ public final class GroupPresident extends Student {
         super(name, surname, age, marks);
     }
 
-    public String toString() {
-        return "Group president: " + super.toString();
-    }
-
     public void giveReport(ArrayList<Student> students) {
         LOGGER.info("Reporting\n " + countAbsentStudents(students) + "students are absent.");
     }
@@ -33,5 +29,9 @@ public final class GroupPresident extends Student {
             if(!student.getPresence()) number++;
         }
         return number;
+    }
+
+    public String toString() {
+        return "Group president: " + super.toString();
     }
 }

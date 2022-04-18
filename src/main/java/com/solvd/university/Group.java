@@ -1,6 +1,7 @@
 package com.solvd.university;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 import com.solvd.university.Documents.Schedule;
 
@@ -71,10 +72,12 @@ public class Group {
     }
 
     public String toString() {
-        String info = "Group: " + number + "\n" + curator.toString() + "\n" + president.toString() + "\nStudents:";
-        for(Student student: students)
-            info += "\n" + student.toString();
-        info += "\n" + schedule.toString();
-        return info;
+        final StringBuilder info = new StringBuilder("Group: " + number + "\n"
+                + curator.toString() + "\n"
+                + president.toString()
+                + "\nStudents:");
+        Stream.of(students).forEach(student -> info.append("\n").append(student.toString()));
+        info.append("\n").append(schedule.toString());
+        return info.toString();
     }
 }

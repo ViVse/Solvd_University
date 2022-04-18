@@ -1,6 +1,7 @@
 package com.solvd.university;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -46,9 +47,8 @@ public abstract class Faculty {
     }
 
     public String toString() {
-        String info = "Faculty " + name + "\nAcademic departments:";
-        for(AcademicDepartment department: departments)
-            info += "\n" + department.toString();
-        return info;
+        final StringBuilder info = new StringBuilder("Faculty " + name + "\nAcademic departments:");
+        Stream.of(departments).forEach(department -> info.append("\n").append(department.toString()));
+        return info.toString();
     }
 }
