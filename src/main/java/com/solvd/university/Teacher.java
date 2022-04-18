@@ -1,6 +1,7 @@
 package com.solvd.university;
 
 import org.apache.commons.lang3.RandomUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,7 +27,7 @@ public class Teacher extends Human implements ITeach {
 
     public void setSubject(String subject) {
         try {
-            if(subject == null || subject.isBlank())
+            if(StringUtils.isAllBlank(subject))
                 throw new TeacherException("Subject should not be blank");
             this.subject = subject;
         } catch(TeacherException ex) {

@@ -2,6 +2,7 @@ package com.solvd.university;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,7 +31,7 @@ public class University {
 
     public void setName(String name) {
         try {
-            if(name == null || name.isBlank())
+            if(StringUtils.isAllBlank(name))
                 throw new IllegalArgumentException("Name should not be blank");
             this.name = name;
         } catch(IllegalArgumentException ex) {
