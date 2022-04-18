@@ -1,7 +1,6 @@
 package com.solvd.university;
 
-import java.util.Random;
-
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,8 +35,7 @@ public class Teacher extends Human implements ITeach {
     }
 
     public void giveMark(Student student) {
-        Random random = new Random();
-        int mark = random.nextInt(5) + 1;
+        int mark = RandomUtils.nextInt(1, 6);
         student.addMark(mark);
     }
 
