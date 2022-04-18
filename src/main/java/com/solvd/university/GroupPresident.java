@@ -2,7 +2,12 @@ package com.solvd.university;
 
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public final class GroupPresident extends Student {
+
+    private static final Logger LOGGER = LogManager.getLogger(GroupPresident.class);
 
     public GroupPresident() {}
 
@@ -15,11 +20,11 @@ public final class GroupPresident extends Student {
     }
 
     public void giveReport(ArrayList<Student> students) {
-        System.out.println("Reporting\n " + countAbsentStudents(students) + "students are absent.");
+        LOGGER.info("Reporting\n " + countAbsentStudents(students) + "students are absent.");
     }
 
     public void fillJournal() {
-        System.out.println("Filled the journal");
+        LOGGER.info("Filled the journal");
     }
 
     private int countAbsentStudents(ArrayList<Student> students) {

@@ -1,6 +1,11 @@
 package com.solvd.university;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public final class Curator extends Teacher{
+
+    private static final Logger LOGGER = LogManager.getLogger(Curator.class);
 
     public Curator() {}
 
@@ -9,7 +14,7 @@ public final class Curator extends Teacher{
     }
 
     public void curate() {
-        System.out.println("Curating");
+        LOGGER.info("Curating");
     }
 
     public String toString() {

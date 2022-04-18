@@ -54,17 +54,17 @@ public class Student extends Human implements IStudy {
 
     @Override
     public final void Read() {
-        System.out.println("Reading...");
+        LOGGER.info("Reading...");
     }
 
     @Override
     public final void MakeNotes() {
-        System.out.println("Making notes...");
+        LOGGER.info("Making notes...");
     }
 
     @Override
     public final void DoHomework() {
-        System.out.println("Doing homework...");
+        LOGGER.info("Doing homework...");
     }
 
     public String toString() {

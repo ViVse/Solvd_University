@@ -47,7 +47,7 @@ public class Teacher extends Human implements ITeach {
 
     @Override
     public final void GiveLecture() {
-        System.out.println("Giving lectures about " + subject);
+        LOGGER.info("Giving lectures about " + subject);
     }
 
     public String toString() {

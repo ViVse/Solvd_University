@@ -5,7 +5,12 @@ import java.util.Random;
 import com.solvd.university.Documents.Resolution;
 import com.solvd.university.Interfaces.IAdministrate;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public final class Rector extends Human implements IAdministrate {
+
+    private static final Logger LOGGER = LogManager.getLogger(Rector.class);
 
     public Rector() {}
 
@@ -23,6 +28,6 @@ public final class Rector extends Human implements IAdministrate {
 
     @Override
     public void MakeSpeech() {
-        System.out.println("Delivering a speech");
+        LOGGER.info("Delivering a speech");
     }
 }

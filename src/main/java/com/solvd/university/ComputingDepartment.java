@@ -1,8 +1,13 @@
 package com.solvd.university;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 
 public class ComputingDepartment extends AcademicDepartment {
+
+    private static final Logger LOGGER = LogManager.getLogger(ComputingDepartment.class);
 
     public ComputingDepartment() {
     }
@@ -13,6 +18,6 @@ public class ComputingDepartment extends AcademicDepartment {
 
     @Override
     public void CreateCurriculum() {
-        System.out.println("Created Math Curriculum");
+        LOGGER.info("Created Math Curriculum");
     }
 }

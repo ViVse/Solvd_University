@@ -2,7 +2,12 @@ package com.solvd.university;
 
 import java.util.ArrayList;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class DataScienceDepartment extends AcademicDepartment {
+
+    private static final Logger LOGGER = LogManager.getLogger(DataScienceDepartment.class);
 
     public DataScienceDepartment() {
     }
@@ -13,6 +18,6 @@ public class DataScienceDepartment extends AcademicDepartment {
 
     @Override
     public void CreateCurriculum() {
-        System.out.println("Created Data Science Curriculum");
+        LOGGER.info("Created Data Science Curriculum");
     }
 }
