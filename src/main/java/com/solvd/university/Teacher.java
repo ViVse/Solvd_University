@@ -42,8 +42,7 @@ public class Teacher extends Human implements ITeach {
 
     @Override
     public final Lecture PrepareLecture() {
-        Lecture newLecture = new Lecture(subject, "Random theme", "Some info");
-        return newLecture;
+        return new Lecture(subject, "Random theme", "Some info");
     }
 
     @Override
